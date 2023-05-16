@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     
 
@@ -18,10 +18,10 @@
         <form action="" method="post" class="form-control">
             <div class="row">
                 <div class="col sm-3">
-                    <input type="text" name="txtN1" placeholder="Informe o N1" class="form-control" id="txtN1">
+                    <input type="number" name="txtN1" placeholder="Informe o N1" class="form-control" id="txtN1" required>
                 </div>
                 <div class="col sm-3">
-                    <input type="text" name="txtN2" placeholder="Informe o N2" class="form-control" id="txtN2">
+                    <input type="number" name="txtN2" placeholder="Informe o N2" class="form-control" id="txtN2" required>
                 </div>
                 <div class="col-sm-6">
                     <button id="btoMais" name="bto" class="btn btn-primary" formaction="pag01.php" value="mais"> + </button>
@@ -66,6 +66,7 @@
                                     }
                                            
                                     echo $total;
+                                    
                                 }
                             ?>
                         </h1>
