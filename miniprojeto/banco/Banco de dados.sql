@@ -96,8 +96,8 @@ create table historico
     Constraint FK_ID_Usuario_Historico foreign key(id_usuario_historico) references usuario(id_usuario)
 );
 
-alter table historico
-add column qtde_produto int not null default 1;
+alter table produto
+add column qtde_produto int not null default 5;
 
 alter table historico
 drop column qtde_produto ;
