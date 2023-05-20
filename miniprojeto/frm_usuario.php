@@ -20,7 +20,7 @@
                     <input type="number" class="form-control" min="0" name="txtID" placeholder="ID do Usuário">
                 </div>
                 <div class="col-sm-4">
-                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar">&#128269;</button>
+                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="usuario_pesquisa.php">&#128269;</button>
                 </div>
                 <div class="col-sm-4">
                     <input type="date" class="form-control" name="txtCadastro" id="txtCadastro">
@@ -63,9 +63,9 @@
                 <div class="col-sm-12 text-end">
                     <button name="btoCadastrar" id="btoCadastrar" class="btn btn-primary" formaction="usuario_cadastrar.php">Cadastrar</button>
                     <button name="btoAlterar" id="btoAlterar" class="btn btn-danger" formaction="usuario_alterar.php">Alterar</button>
-                    <button name="btoLimpar" id="btoLimpar" class="btn btn-secondary">Limpar</button>
-                    <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning">Excluir</button>
-                    <button name="btoSair" id="btoSair" class="btn btn-dark">Sair</button>
+                    <button name="btoLimpar" id="btoLimpar" class="btn btn-secondary" formaction="frm_usuario.php">Limpar</button>
+                    <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="usuario_excluir.php">Excluir</button>
+                    <button name="btoSair" id="btoSair" class="btn btn-dark" formaction="index.php">Sair</button>
                 </div>
             </div>
         </form>
