@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
+    <?php include_once('produto_pesquisa.php') ?>
     <div class="container mt-3">
         <div class="row mt-3">
             <div class="col-sm-12 text-center">
@@ -17,51 +18,54 @@
         <form action="" method="post" class="form-control">
             <div class="row mt-3">
                 <div class="col-sm-4">
-                    <input type="number" class="form-control" name="txtID" min="0" placeholder="ID do Produto">
+                    <input type="number" class="form-control" name="txtID" min="0" placeholder="ID do Produto" value="<?=$idProduto?>">
                 </div>
                 <div class="col-sm-4">
-                    <button class="btn btn-primary" name="btoPesquisa" id="btoPesquisa" formaction="produto_pesquisa.php">&#128269;</button>
+                    <button class="btn btn-primary" name="btoPesquisa" id="btoPesquisa" formaction="frm_produto.php">&#128269;</button>
                 </div>
                 <div class="col-sm-4">
-                    <input type="date" class="form-control" name="txtCadastro" id="txtCadastro">
+                    <input type="text" class="form-control" name="txtCadastro" id="txtCadastro" value="<?=$cadastroProduto?>">
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome do Produto">
+                    <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome do Produto" value="<?=$nomeProduto?>">
                 </div>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="txtMarca" id="txtMarca" placeholder="Nome da Marca">
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="txtMarca" id="txtMarca" placeholder="Nome da Marca" value="<?=$marcaProduto?>">
+                </div>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control" name="txtQtd" min="0" placeholder="Qtd de produto" value="<?=$qtdeProduto?>">
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-3">
-                    <input type="number" class="form-control" name="txtValorCusto" min="0" placeholder="Valor Unitario de Custo do Produto">
+                    <input type="number" class="form-control" name="txtValorCusto" step="0.01" min="0" value="<?=$valorcustoProduto?>" placeholder="Valor Unitario de Custo do Produto">
                 </div>
                 <div class="col-sm-3">
-                    <input type="number" class="form-control" name="txtValorUni" min="0" placeholder="Valor Unitario do Produto">
+                    <input type="number" class="form-control" name="txtValorUni" step="0.01" min="0" value="<?=$valoruniProduto?>" placeholder="Valor Unitario do Produto">
                 </div>
                 <div class="col-sm-3">
-                    <input type="number" class="form-control" name="txtIDC" min="0" placeholder="ID da Categoria">
+                    <input type="number" class="form-control" name="txtIDC" min="0" placeholder="ID da Categoria" value="<?=$idCategoria?>">
                 </div>
                 <div class="col-sm-3">
                 <select name="txtStatus" id="textStatus" class="form-control">
                         <option value="">--Selecione um Status--</option>
-                        <option value="Ativo">Ativo</option>
-                        <option value="Inativo">Inativo</option>
+                        <option value="ativo" <?=($statusProduto=='ativo'?'selected':'') ?>>Ativo</option>
+                        <option value="inativo" <?=($statusProduto =='inativo'?'selected':'') ?>>Inativo</option>
                     </select>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-12">
-                    <textarea name="txtObs" id="txtObs" class="form-control" rows="5" placeholder="Observações do Usuário"></textarea>
+                    <textarea name="txtObs" id="txtObs" class="form-control" rows="5" placeholder="Observações do Usuário"><?=$obsProduto?></textarea>
                 </div>
             <div class="row mt-3">
                 <div class="col-sm-12 text-end">
-                    <button name="btoCadastrar" id="btoCadastrar" class="btn btn-primary" formaction="categoria_cadastrar.php">Cadastrar</button>
-                    <button name="btoAlterar" id="btoAlterar" class="btn btn-danger" formaction="categoria_alterar.php">Alterar</button>
-                    <button name="btoLimpar" id="btoLimpar" class="btn btn-secondary" formaction="frm_categoria.php">Limpar</button>
-                    <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="categoria_excluir.php">Excluir</button>
+                    <button name="btoCadastrar" id="btoCadastrar" class="btn btn-primary" formaction="produto_cadastrar.php">Cadastrar</button>
+                    <button name="btoAlterar" id="btoAlterar" class="btn btn-danger" formaction="produto_alterar.php">Alterar</button>
+                    <button name="btoLimpar" id="btoLimpar" class="btn btn-secondary" formaction="frm_produto.php">Limpar</button>
+                    <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="produto_excluir.php">Excluir</button>
                     <button name="btoSair" id="btoSair" class="btn btn-dark" formaction="index.php">Sair</button>
                 </div>
         </form>

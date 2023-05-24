@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
+    <?php include_once('categoria_pesquisa.php') ?>
     <div class="container mt-3">
         <div class="row mt-3">
             <div class="col-sm-12 text-center">
@@ -17,32 +18,32 @@
         <form action="" method="post" class="form-control">
             <div class="row mt-3">
                 <div class="col-sm-6">
-                    <input type="number" name="txtID" min="0" class="form-control" placeholder="*ID da Categoria">
+                    <input type="number" name="txtID" min="0" class="form-control" placeholder="*ID da Categoria" value="<?=$idCategoria?>">
                 </div>
                 <div class="col-sm-6">
-                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="categoria_pesquisa.php">&#128269;</button>
+                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="frm_categoria.php">&#128269;</button>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-6">
-                    <input type="text" name="txtNome" id="txtNome" class="form-control" formaction="" placeholder="*Nome da Categoria">
+                    <input type="text" name="txtNome" id="txtNome" class="form-control" formaction="" placeholder="*Nome da Categoria" value="<?=$nomeCategoria?>">
                 </div>
                 <div class="col-sm-6">
                     <select name="txtStatus" id="textStatus" class="form-control">
                         <option value="">--Selecione um Status--</option>
-                        <option value="Ativo">Ativo</option>
-                        <option value="Inativo">Inativo</option>
+                        <option value="ativo" <?=($statusCategoria=='ativo'?'selected':"")?>>ativo</option>
+                        <option value="inativo" <?=($statusCategoria=='inativo'?'selected':"")?>>inativo</option>
                     </select>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-12">
-                    <textarea name="txtDescricao" id="txtDescricao" rows="5" class="form-control" formaction="" placeholder="*Descrição da Categoria"></textarea>
+                    <textarea name="txtDescricao" id="txtDescricao" rows="5" class="form-control" formaction="" placeholder="*Descrição da Categoria"><?=$descricaoCategoria?></textarea>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-12">
-                    <textarea name="txtObs" id="txtObs" rows="10" class="form-control" formaction="" placeholder="Observação do Usuário"></textarea>
+                    <textarea name="txtObs" id="txtObs" rows="10" class="form-control" formaction="" placeholder="Observação do Usuário"><?=$obsCategoria?></textarea>
                 </div>
             </div>
             <div class="row mt-3">

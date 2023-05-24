@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
+    <?php include_once('usuario_pesquisa.php') ?> 
     <div class="container mt-3">
         <div class="row">
             <div class="col-sm-12 text-center">
@@ -17,29 +18,29 @@
         <form action="" method="post" class="form-control">
             <div class="row mt-3">
                 <div class="col-sm-4">
-                    <input type="number" class="form-control" min="0" name="txtID" placeholder="ID do Usuário">
+                    <input type="number" class="form-control" min="0" name="txtID" value="<?=$idUsuario ?>" placeholder="ID do Usuário">
                 </div>
                 <div class="col-sm-4">
-                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="usuario_pesquisa.php">&#128269;</button>
+                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="frm_usuario.php">&#128269;</button>
                 </div>
                 <div class="col-sm-4">
-                    <input type="date" class="form-control" name="txtCadastro" id="txtCadastro">
+                    <input type="text" class="form-control" name="txtCadastro" id="txtCadastro" value="<?=$cadastroUsuario ?>" placeholder="Data de cadastro">
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome do usuário">
+                    <input type="text" class="form-control" name="txtNome" id="txtNome" value="<?=$nomeUsuario ?>" placeholder="Nome do usuário">
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" name="txtLogin" id="txtLogin" placeholder="Login do usuário">
+                    <input type="text" class="form-control" name="txtLogin" id="txtLogin" value="<?=$loginUsuario ?>" placeholder="Login do usuário">
                 </div>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" name="txtSenha" id="txtSenha" placeholder="Senha do usuário">
+                    <input type="text" class="form-control" name="txtSenha" id="txtSenha" value="<?=$senhaUsuario ?>" placeholder="Senha do usuário">
                 </div>
                 <div class="col-sm-4">
-                    <input type="date" class="form-control" name="txtNascimento" id="txtNascimento" placeholder="Data de nascimento">
+                    <input type="text" class="form-control" name="txtNascimento" id="txtNascimento" value="<?=$nascimentoUsuario ?>" placeholder="Data de nascimento">
                 </div>
             </div>
             <div class="row mt-3">
@@ -49,14 +50,14 @@
                 <div class="col-sm-4">
                     <select name="txtStatus" id="txtStatus" class="form-control">
                         <option value="">-- Selecione um status --</option>
-                        <option value="Ativo">Ativo</option>
-                        <option value="Inativo">Inativo</option>
+                        <option value="ativo" <?=($statusUsuario=='ativo'?'selected':"") ?>>ativo</option>
+                        <option value="inativo" <?=($statusUsuario=='inativo'?'selected':"") ?>>inativo</option>
                     </select>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-sm-12">
-                    <textarea class="form-control" name="txtObs" id="txtObs" rows="10" placeholder="Observação do usuário"></textarea>
+                    <textarea class="form-control" name="txtObs" id="txtObs" rows="10"  placeholder="Observação do usuário"> <?=$obsUsuario ?> </textarea>
                 </div>
             </div>
             <div class="row mt-3">
