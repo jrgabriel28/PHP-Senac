@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-</head>
-<body>
+
     <?php include_once('produto_pesquisa.php') ?>
     <div class="container mt-3">
         <div class="row mt-3">
@@ -21,10 +12,10 @@
                     <input type="number" class="form-control" name="txtID" min="0" placeholder="ID do Produto" value="<?=$idProduto?>">
                 </div>
                 <div class="col-sm-4">
-                    <button class="btn btn-primary" name="btoPesquisa" id="btoPesquisa" formaction="frm_produto.php">&#128269;</button>
+                    <button class="btn btn-primary" name="btoPesquisa" id="btoPesquisa" formaction="_sistema.php?tela=produto">&#128269;</button>
                 </div>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" name="txtCadastro" id="txtCadastro" value="<?=$cadastroProduto?>">
+                    <input type="date" class="form-control" name="txtCadastro" id="txtCadastro" value="<?=substr($cadastroProduto,0,10)?>">
                 </div>
             </div>
             <div class="row mt-3">
@@ -64,9 +55,9 @@
                 <div class="col-sm-12 text-end">
                     <button name="btoCadastrar" id="btoCadastrar" class="btn btn-primary" formaction="produto_cadastrar.php">Cadastrar</button>
                     <button name="btoAlterar" id="btoAlterar" class="btn btn-danger" formaction="produto_alterar.php">Alterar</button>
-                    <button name="btoLimpar" id="btoLimpar" class="btn btn-secondary" formaction="frm_produto.php">Limpar</button>
+                    <a href="_sistema.php?tela=produto" name="btoLimpar" id="btoLimpar" class="btn btn-">Limpar</a>
                     <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="produto_excluir.php">Excluir</button>
-                    <button name="btoSair" id="btoSair" class="btn btn-dark" formaction="index.php">Sair</button>
+                    <a href="_sistema.php" name="btoSair" id="btoSair" class="btn btn-dark">Sair</a>
                 </div>
         </form>
     </div>    
@@ -75,5 +66,3 @@
 
 
     <script src="../js/bootstrap.js"></script>
-</body>
-</html>

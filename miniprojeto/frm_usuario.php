@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-</head>
-<body>
+
     <?php include_once('usuario_pesquisa.php') ?> 
     <div class="container mt-3">
         <div class="row">
@@ -21,10 +12,10 @@
                     <input type="number" class="form-control" min="0" name="txtID" value="<?=$idUsuario ?>" placeholder="ID do Usuário">
                 </div>
                 <div class="col-sm-4">
-                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="frm_usuario.php">&#128269;</button>
+                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="_sistema.php?tela=usuario">&#128269;</button>
                 </div>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" name="txtCadastro" id="txtCadastro" value="<?=$cadastroUsuario ?>" placeholder="Data de cadastro">
+                    <input type="date" class="form-control" name="txtCadastro" id="txtCadastro" value="<?=substr($cadastroUsuario,0,10) ?>" placeholder="Data de cadastro">
                 </div>
             </div>
             <div class="row mt-3">
@@ -40,7 +31,7 @@
                     <input type="text" class="form-control" name="txtSenha" id="txtSenha" value="<?=$senhaUsuario ?>" placeholder="Senha do usuário">
                 </div>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" name="txtNascimento" id="txtNascimento" value="<?=$nascimentoUsuario ?>" placeholder="Data de nascimento">
+                    <input type="date" class="form-control" name="txtNascimento" id="txtNascimento" value="<?=substr($nascimentoUsuario,0,10) ?>">
                 </div>
             </div>
             <div class="row mt-3">
@@ -64,17 +55,11 @@
                 <div class="col-sm-12 text-end">
                     <button name="btoCadastrar" id="btoCadastrar" class="btn btn-primary" formaction="usuario_cadastrar.php">Cadastrar</button>
                     <button name="btoAlterar" id="btoAlterar" class="btn btn-danger" formaction="usuario_alterar.php">Alterar</button>
-                    <button name="btoLimpar" id="btoLimpar" class="btn btn-secondary" formaction="frm_usuario.php">Limpar</button>
+                    <a href="_sistema.php?tela=usuario" name="btoLimpar" id="btoLimpar" class="btn btn-">Limpar</a>
                     <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="usuario_excluir.php">Excluir</button>
-                    <button name="btoSair" id="btoSair" class="btn btn-dark" formaction="index.php">Sair</button>
+                    <a href="_sistema.php" name="btoSair" id="btoSair" class="btn btn-dark">Sair</a>
                 </div>
             </div>
         </form>
     </div>
-
-
-
-
     <script src="../js/bootstrap.js"></script>
-</body>
-</html>

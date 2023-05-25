@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-</head>
-<body>
+
     <?php include_once('categoria_pesquisa.php') ?>
     <div class="container mt-3">
         <div class="row mt-3">
@@ -21,7 +12,7 @@
                     <input type="number" name="txtID" min="0" class="form-control" placeholder="*ID da Categoria" value="<?=$idCategoria?>">
                 </div>
                 <div class="col-sm-6">
-                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="frm_categoria.php">&#128269;</button>
+                    <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="_sistema.php?tela=categoria">&#128269;</button>
                 </div>
             </div>
             <div class="row mt-3">
@@ -50,9 +41,9 @@
                 <div class="col-sm-12 text-end">
                     <button name="btoCadastrar" id="btoCadastrar" class="btn btn-primary" formaction="categoria_cadastrar.php">Cadastrar</button>
                     <button name="btoAlterar" id="btoAlterar" class="btn btn-danger" formaction="categoria_alterar.php">Alterar</button>
-                    <button name="btoLimpar" id="btoLimpar" class="btn btn-secondary" formaction="frm_categoria.php">Limpar</button>
+                    <a href="_sistema.php?tela=categoria" name="btoLimpar" id="btoLimpar" class="btn btn-">Limpar</a>
                     <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="categoria_excluir.php">Excluir</button>
-                    <button name="btoSair" id="btoSair" class="btn btn-dark" formaction="index.php">Sair</button>
+                    <a href="_sistema.php" name="btoSair" id="btoSair" class="btn btn-dark">Sair</a>
                 </div>
             </div>
         </form>
@@ -60,5 +51,3 @@
 
 
     <script src="../js/bootstrap.js"></script>
-</body>
-</html>

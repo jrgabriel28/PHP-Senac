@@ -3,6 +3,7 @@
 
     if($_POST) 
     {
+        $IDpro = $_POST['txtID'];
         $IDcat = $_POST['txtIDC'];
         $nome = $_POST['txtNome'];
         $marca = $_POST['txtMarca'];
@@ -15,31 +16,20 @@
 
         try {
             $sql = $conn->prepare("
-                insert into produto
-                (
-                    id_categoria_produto,
-                    nome_produto,
-                    marca_produto,
-                    valorunitario_produto,
-                    valordecusto_produto,
-                    obs_produto,
-                    status_produto,
-                    qtde_produto
-                )
-                values
-                (
-                    :id_categoria_produto,
-                    :nome_produto,
-                    :marca_produto,
-                    :valorunitario_produto,
-                    :valordecusto_produto,
-                    :obs_produto,
-                    :status_produto,
-                    :qtde_produto
-                )
+                update produto set 
+                    id_categoria_produto=:id_categoria_produto,
+                    nome_produto=:nome_produto,
+                    marca_produto=:marca_produto,
+                    valorunitario_produto=:valorunitario_produto,
+                    valordecusto_produto=:valordecusto_produto,
+                    obs_produto=:obs_produto,
+                    status_produto=:status_produto,
+                    qtde_produto=:qtde_produto
+                where id_produto=:id_produto
             ");
 
             $sql->execute(array(
+                ':id_produto'=>$IDpro,
                 ':id_categoria_produto'=>$IDcat,
                 ':nome_produto'=>$nome,
                 ':marca_produto'=>$marca,
@@ -53,8 +43,7 @@
 
             if($sql->rowCount()>=1)
             {
-                echo '<p>Dados cadastrados com sucesso!</p>';
-                echo '<p>ID Gerado: '.$conn->lastInsertId().'</p>';
+                echo '<p>Dados alterados com sucesso!</p>';
             }
 
 

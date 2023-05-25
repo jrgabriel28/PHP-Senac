@@ -3,15 +3,16 @@
 
     if($_POST)
     {
-        $id= $_POST['txtID'];
+        $id = $_POST['txtID'];
 
-        try {
+        try 
+        {
             $sql = $conn->prepare("
-            delete from usuario where id_usuario=:id_usuario
+                delete from produto where id_produto=:id_produto
             ");
 
             $sql->execute(array(
-                ':id_usuario'=>$id
+                ':id_produto'=>$id
             ));
 
             if($sql->rowCount()>=1)
@@ -22,12 +23,17 @@
         } catch (PDOException $ex) {
             echo $ex->getMessage();
         }
+        
     }
     else
     {
-        header('Location:_sistema.php?tela=usuario');
+        header('Location:_sistema.php?tela=produto');
     }
 ?>
 
 <hr>
-<a href="_sistema.php?tela=usuario">Voltar</a>
+<a href="_sistema.php?tela=produto">Voltar</a>
+
+
+
+?>
