@@ -51,9 +51,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
-                <?php include_once('_rodape.php') ?>
-            </div>
+            <?php include_once('_rodape.php') ?>
         </div>
     </div>
 
