@@ -59,6 +59,7 @@
                     <button name="btoExcluir" id="btoCExcluir" class="btn btn-warning" formaction="produto_excluir.php">Excluir</button>
                     <a href="_sistema.php" name="btoSair" id="btoSair" class="btn btn-dark">Sair</a>
                 </div>
+            </div>
         </form>
     </div>    
 

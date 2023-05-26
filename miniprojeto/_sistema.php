@@ -50,6 +50,7 @@
                 ?>
             </div>
         </div>
+        <br>
         <div class="row">
             <?php include_once('_rodape.php') ?>
         </div>

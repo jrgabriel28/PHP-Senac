@@ -1,5 +1,4 @@
-
-    <?php include_once('categoria_pesquisa.php') ?>
+<?php include_once('categoria_pesquisa.php') ?>
     <div class="container mt-3">
         <div class="row mt-3">
             <div class="col-sm-12 text-center">

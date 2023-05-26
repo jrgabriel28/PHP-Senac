@@ -9,7 +9,7 @@
         <form action="" method="post" class="form-control">
             <div class="row mt-3">
                 <div class="col-sm-4">
-                    <input type="number" class="form-control" min="0" name="txtID" value="<?=$idUsuario ?>" placeholder="ID do Usuário">
+                    <input type="number" class="form-control" min="0" name="txtID" value="<?=$idUsuario?>" placeholder="ID do Usuário">
                 </div>
                 <div class="col-sm-4">
                     <button class="btn btn-primary" name="btoPesquisar" id="btoPesquisar" formaction="_sistema.php?tela=usuario">&#128269;</button>
