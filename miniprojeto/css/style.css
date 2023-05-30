@@ -1,38 +1,43 @@
-#topo{
+#topo {
     height: 150px;
     background-color: cyan;
+    margin-bottom: 10px;
 }
 
-#rodape{
+#rodape {
     height: 150px;
     background-color: cadetblue;
 }
 
-#logo{
+#logo {
     height: 100px;
     width: 400px;
     margin: auto;
+    margin-bottom: 10px;
     background-color: blueviolet;
     text-align: center;
     line-height: 100px;
     font-size: 30px;
 }
 
-.subMenu{
+.subMenu {
     height: 60px;
     line-height: 60px;
     margin: 10px 0px;
     text-align: center;
-    background-color: crimson;
+    background-color: #502F74;
     font-size: 20px;
+    border-radius: 20px;
     color: white;
 }
 
-.subMenu:hover{
-    background-color: coral;
+.subMenu:hover {
+    border: 1px solid #502F74;
+    background-color: white;
+    color: #502F74;
 }
 
-.a{
+.a {
     text-decoration: none;
     color: black;
 }

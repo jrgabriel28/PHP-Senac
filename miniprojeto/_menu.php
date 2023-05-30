@@ -1,5 +1,5 @@
 <a href="_sistema.php">
-    <div class="subMenu">HOME</div>
+  <div class="subMenu">HOME</div>
 </a>
 
 <a href="_sistema.php?tela=usuario">
@@ -18,8 +18,15 @@
     <div class="subMenu">HISTORICO</div>
 </a>
 
-<a href="_sistema.php?tela=sair">
+<a href="login_logoff.php">
     <div class="subMenu">SAIR</div>
 </a>
+
+<div class="info">
+    <p>ID:<?=$idUsuarioLogin?></p>
+    <p>Nome:<?=$nomeUsuarioLogin?></p>
+    <p>Login:<?=$loginUsuarioLogin?></p>
+    <p>imagem:<?=$imgUsuarioLogin?></p>
+</div>
 
   
